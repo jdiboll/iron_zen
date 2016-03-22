@@ -32,24 +32,24 @@ describe("About Arrays", function() {
   it("should understand array length", function () {
     var fourNumberArray = [1, 2, 3, 4];
 
-    expect(fourNumberArray.length).toBe(FILL_ME_IN);
+    expect(fourNumberArray.length).toBe(4);
     fourNumberArray.push(5, 6);
-    expect(fourNumberArray.length).toBe(FILL_ME_IN);
+    expect(fourNumberArray.length).toBe(6);
 
     var tenEmptyElementArray = new Array(10);
     expect(tenEmptyElementArray.length).toBe(FILL_ME_IN);
 
     tenEmptyElementArray.length = 5;
-    expect(tenEmptyElementArray.length).toBe(FILL_ME_IN);
+    expect(tenEmptyElementArray.length).toBe();
   });
 
   it("should slice arrays", function () {
     var array = ["peanut", "butter", "and", "jelly"];
 
-    expect(array.slice(0, 1)).toEqual(FILL_ME_IN);
-    expect(array.slice(0, 2)).toEqual(FILL_ME_IN);
-    expect(array.slice(2, 2)).toEqual(FILL_ME_IN);
-    expect(array.slice(2, 20)).toEqual(FILL_ME_IN);
+    expect(array.slice(0, 1)).toEqual("peanut");
+    expect(array.slice(0, 2)).toEqual('peanut', 'butter');
+    expect(array.slice(2, 2)).toEqual('butter');
+    expect(array.slice(2, 20)).toEqual('butter', "and", "jelly";
     expect(array.slice(3, 0)).toEqual(FILL_ME_IN);
     expect(array.slice(3, 100)).toEqual(FILL_ME_IN);
     expect(array.slice(5, 1)).toEqual(FILL_ME_IN);
@@ -77,21 +77,21 @@ describe("About Arrays", function() {
     var array = [1, 2];
     array.push(3);
 
-    expect(array).toEqual(FILL_ME_IN);
+    expect(array).toEqual([1,2,3]);
 
     var poppedValue = array.pop();
-    expect(poppedValue).toBe(FILL_ME_IN);
-    expect(array).toEqual(FILL_ME_IN);
+    expect(poppedValue).toBe(3);
+    expect(array).toEqual([1,2];
   });
 
   it("should know about shifting arrays", function () {
     var array = [1, 2];
 
     array.unshift(3);
-    expect(array).toEqual(FILL_ME_IN);
+    expect(array).toEqual([1,2,3]);
 
     var shiftedValue = array.shift();
-    expect(shiftedValue).toEqual(FILL_ME_IN);
-    expect(array).toEqual(FILL_ME_IN);
+    expect(shiftedValue).toEqual(1);
+    expect(array).toEqual([2,3]);
   });
 });
